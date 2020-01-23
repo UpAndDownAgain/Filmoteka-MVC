@@ -9,13 +9,13 @@ namespace Filmoteka.Controllers
 {
     public class HelloWorldController : Controller
     {
-        // GET: HelloWorld
-        public string Index()
+        // GET: /Helloworld
+        public ActionResult Index()
         {
-            return "This is my default action";
+            return View();
         }
 
-        //GET: /HelloWorld/Welcolme
+        //GET: /HelloWorld/Welcome
         public string Welcome(string n, int i = 0)
         {
             return HttpUtility.HtmlEncode("Hello " + n + ", Number is: " + i);

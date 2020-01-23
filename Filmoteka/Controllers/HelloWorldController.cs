@@ -16,9 +16,12 @@ namespace Filmoteka.Controllers
         }
 
         //GET: /HelloWorld/Welcome
-        public string Welcome(string n, int i = 0)
+        public ActionResult Welcome(string n, int i = 0)
         {
-            return HttpUtility.HtmlEncode("Hello " + n + ", Number is: " + i);
+            ViewBag.Message = "Hello " + n;
+            ViewBag.Number = i;
+
+            return View();
         }
     }
 }

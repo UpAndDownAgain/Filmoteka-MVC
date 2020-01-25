@@ -15,10 +15,12 @@
         <input type="submit" value="Filter" />
     </p>
     }
-
+    @if (User.IsInRole("admin"))
+    {
     <p>
         @Html.ActionLink("Vložit nový film", "Create")
     </p>
+    }
     <table class="table">
         <tr>
             <th>
@@ -39,26 +41,34 @@
 
         @foreach (var item in Model)
         {
-            <tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.releaseDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genre.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.director)
+            </td>
+            @if (User.IsInRole("admin"))
+            {
                 <td>
-                    @Html.DisplayFor(modelItem => item.title)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.releaseDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.genre.name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.director)
-                </td>
-
-                <td>
-                    @Html.ActionLink("Editovat", "Edit", new { id = item.id }) |
                     @Html.ActionLink("Podrobnosti", "Details", new { id = item.id }) |
+                    @Html.ActionLink("Editovat", "Edit", new { id = item.id }) |
                     @Html.ActionLink("Smazat", "Delete", new { id = item.id })
                 </td>
-            </tr>
+            }
+            else
+            {
+                <td>
+                    @Html.ActionLink("Podrobnosti", "Details", new { id = item.id })
+                </td>
+            }
+        </tr>
         }
 
     </table>

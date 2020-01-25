@@ -31,11 +31,11 @@
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.genre)
+            @Html.DisplayFor(model => model.genre.name)
         </dd>
-        <dr>
+        <dt>
             @Html.DisplayNameFor(model => model.director)
-        </dr>
+        </dt>
         <dd>
             @Html.DisplayFor(model => model.director)
         </dd>
@@ -43,6 +43,8 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @if (User.IsInRole("admin")) {
+    @Html.ActionLink("Editovat", "Edit", new { id = Model.id })
+    }
+    @Html.ActionLink("Zpátky", "Index")
 </p>

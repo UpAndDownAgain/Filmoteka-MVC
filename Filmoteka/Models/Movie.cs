@@ -21,7 +21,12 @@ namespace Filmoteka.Models
         
         [Display(Name = "Žánr")]
         public string genre { get; set; }
-        public decimal price { get; set; }
+        
+        /*
+        [Display(Name = "Žánr")]
+        public Genre genre { get; set; }
+        */
+
         [Display(Name = "Režie")]
         public string director { get; set; }
     }

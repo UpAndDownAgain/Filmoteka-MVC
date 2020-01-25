@@ -141,15 +141,16 @@
     <Compile Include="Migrations\202001251121052_Initial.designer.cs">
       <DependentUpon>202001251121052_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202001251127524_2.cs" />
-    <Compile Include="Migrations\202001251127524_2.designer.cs">
-      <DependentUpon>202001251127524_2.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\202001251143126_director.cs" />
     <Compile Include="Migrations\202001251143126_director.designer.cs">
       <DependentUpon>202001251143126_director.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001251242081_odstraneni_price.cs" />
+    <Compile Include="Migrations\202001251242081_odstraneni_price.designer.cs">
+      <DependentUpon>202001251242081_odstraneni_price.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -220,11 +221,11 @@
     <EmbeddedResource Include="Migrations\202001251121052_Initial.resx">
       <DependentUpon>202001251121052_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202001251127524_2.resx">
-      <DependentUpon>202001251127524_2.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001251143126_director.resx">
       <DependentUpon>202001251143126_director.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001251242081_odstraneni_price.resx">
+      <DependentUpon>202001251242081_odstraneni_price.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

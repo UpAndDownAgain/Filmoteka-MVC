@@ -22,48 +22,42 @@
                     title = "Twelwe Monkeys",
                     releaseDate = DateTime.Parse("1985-12-8"),
                     genre = "Sci-Fi",
-                    director = "Terry William",
-                    price = 1.0M
+                    director = "Terry William"
                 },
                 new Movie
                 {
                     title = "Inception",
                     releaseDate = DateTime.Parse("2010-7-22"),
                     genre = "Sci-Fi",
-                    director = "Christopher Nolan",
-                    price = 2.0M
+                    director = "Christopher Nolan"
                 },
                 new Movie
                 {
                     title = "Interstellar",
                     releaseDate = DateTime.Parse("2014-11-06"),
                     genre = "Sci-Fi",
-                    director = "Christopher Nolan",
-                    price = 3.0M
+                    director = "Christopher Nolan"
                 },
                 new Movie
                 {
                     title = "Blade Runner",
                     releaseDate = DateTime.Parse("1982-6-25"),
-                    director = "Ridley Scott",
                     genre = "Sci-Fi",
-                    price = 4.0M
+                    director = "Ridley Scott",
                 },
                 new Movie
                 {
                     title = "Inception",
                     releaseDate = DateTime.Parse("2010-7-22"),
-                    director = "Christopher Nolan",
                     genre = "Sci-Fi",
-                    price = 2.0M
+                    director = "Christopher Nolan"
                 },
                 new Movie
                 {
                     title = "Se7en",
                     releaseDate = DateTime.Parse("1996-3-28"),
-                    director = "David Fincher",
                     genre = "Thriller",
-                    price = 10M
+                    director = "David Fincher",
                 },
                 new Movie
                 {
@@ -71,7 +65,6 @@
                     releaseDate = DateTime.Parse("2013-1-17"),
                     genre = "Western",
                     director = "Qeuntin Tarantino",
-                    price = 11M
                 }
             );
         }

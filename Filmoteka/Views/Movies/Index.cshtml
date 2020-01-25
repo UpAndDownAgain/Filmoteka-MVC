@@ -33,9 +33,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.director)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.price)
-            </th>
+
             <th></th>
         </tr>
 
@@ -54,9 +52,7 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.director)
                 </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.price)
-                </td>
+
                 <td>
                     @Html.ActionLink("Editovat", "Edit", new { id = item.id }) |
                     @Html.ActionLink("Podrobnosti", "Details", new { id = item.id }) |

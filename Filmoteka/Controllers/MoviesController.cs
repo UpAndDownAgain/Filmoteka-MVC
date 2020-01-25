@@ -18,27 +18,33 @@ namespace Filmoteka.Controllers
         public ActionResult Index(string movieGenre, string searchString)
         {
             var genreList = new List<Genre>();
+            var movieList = new List<Movie>();
+
             var genreQuery = from d in db.Genres orderby d.name select d;
+            var movieQuery = from m in db.Movies orderby m.title select m;
 
             genreList.AddRange(genreQuery.Distinct());
+            movieList.AddRange(movieQuery);
             ViewBag.movieGenre = new SelectList(genreList);
 
-            var movies = from m in db.Movies select m;
-            foreach(var m in movies)
+            
+            foreach(var m in movieList)
             {
                 m.genre = genreList.Find(x => x.id == m.genreFK);
             }
 
             if (!string.IsNullOrEmpty(movieGenre))
             {
-               movies = movies.Where(x => x.genre.name == movieGenre);
+                
+                movieList = movieList.FindAll(x => x.genre.name == movieGenre);
+
             }
 
             if (!string.IsNullOrEmpty(searchString))
             {
-                movies = movies.Where(s => s.title.Contains(searchString));
+                movieList = movieList.FindAll(s => s.title.Contains(searchString));
             }
-            return View(movies);
+            return View(movieList);
         }
 
         // GET: Movies/Details/5

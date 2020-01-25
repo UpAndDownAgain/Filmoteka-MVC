@@ -17,17 +17,21 @@ namespace Filmoteka.Controllers
         // GET: Movies
         public ActionResult Index(string movieGenre, string searchString)
         {
-            var genreList = new List<string>();
-            var genreQuery = from d in db.Movies orderby d.genre select d.genre;
+            var genreList = new List<Genre>();
+            var genreQuery = from d in db.Genres orderby d.name select d;
 
             genreList.AddRange(genreQuery.Distinct());
             ViewBag.movieGenre = new SelectList(genreList);
 
             var movies = from m in db.Movies select m;
+            foreach(var m in movies)
+            {
+                m.genre = genreList.Find(x => x.id == m.genreFK);
+            }
 
             if (!string.IsNullOrEmpty(movieGenre))
             {
-                movies = movies.Where(x => x.genre == movieGenre);
+               movies = movies.Where(x => x.genre.name == movieGenre);
             }
 
             if (!string.IsNullOrEmpty(searchString))

@@ -149,6 +149,14 @@
     <Compile Include="Migrations\202001251242081_odstraneni_price.designer.cs">
       <DependentUpon>202001251242081_odstraneni_price.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202001251418497_zanry.cs" />
+    <Compile Include="Migrations\202001251418497_zanry.designer.cs">
+      <DependentUpon>202001251418497_zanry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001251438318_zanry1.cs" />
+    <Compile Include="Migrations\202001251438318_zanry1.designer.cs">
+      <DependentUpon>202001251438318_zanry1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\Movie.cs" />
@@ -226,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202001251242081_odstraneni_price.resx">
       <DependentUpon>202001251242081_odstraneni_price.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001251418497_zanry.resx">
+      <DependentUpon>202001251418497_zanry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001251438318_zanry1.resx">
+      <DependentUpon>202001251438318_zanry1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

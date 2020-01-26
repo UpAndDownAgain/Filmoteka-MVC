@@ -17,7 +17,7 @@ namespace Filmoteka.Controllers
         private MovieDBContext db = new MovieDBContext();
 
         // GET: Movies
-        [AllowAnonymous]
+        [Authorize]
         public ActionResult Index(string movieGenre, string searchString)
         { 
             var movieList = getMovieList();
@@ -46,7 +46,7 @@ namespace Filmoteka.Controllers
         }
 
         // GET: Movies/Details/5
-        [AllowAnonymous]
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)

@@ -25,6 +25,7 @@
                     <li>@Html.ActionLink("Kontakt", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Přihlásit se", "Login", "Home")</li>
                 </ul>
+                @Html.Partial("_loginPartial")
             </div>
         </div>
     </div>
@@ -32,7 +33,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Musil Adam</p>
         </footer>
     </div>
 
